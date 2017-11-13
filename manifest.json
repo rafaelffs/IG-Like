@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Instagram Hashtag Liker",
+  "description": "Hashtags Likes",
+  "version": "2.0",
+  "author":"Rafael Broering de Souza",
+  "icons": {
+    "128": "xr.png"
+  },
+  "permissions": [
+  "activeTab",
+  "tabs",
+        "notifications",
+        "https://www.instagram.com/explore/tags/"
+],
+       "background":{
+            "scripts":["xr.js"]
+        },
+  "browser_action": {
+    "default_icon": "xr.png"
+  },
+  "incognito" : "split"
+  
+  	
+}

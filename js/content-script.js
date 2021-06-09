@@ -28,7 +28,7 @@ setTimeout(function () {
                             location.reload();
                         }
                     }
-                }, 1000 + (5000 * ind));
+                }, 1000 + ((Math.floor(Math.random() * 6000) + 5000) * ind));
             })(i)
         };
     }
@@ -52,3 +52,11 @@ function obterInformacoesUsuario(userName, callback) {
         callback(chrome.runtime.lastError ? null : usuario[userName]);
     });
 }
+
+//adicionar mais likes
+//function salvarInformacoesUsuario(userName, obj) {
+//    var usuario = {};
+//    usuario[userName] = obj;
+//    chrome.storage.sync.set(usuario);
+//}
+// salvarInformacoesUsuario('user', ('user', { qtd: 500, data: "3-1-2021" }));

@@ -80,9 +80,9 @@ function carregarInformacoesDoUsuario() {
 				var datetime =  (currentdate.getMonth()+1) +"-"
 					+ currentdate.getDate()  + "-" 
 					+ currentdate.getFullYear();
-				userInfo.qtdLikesRestantes = 100;
+				userInfo.qtdLikesRestantes = 300;
 				userInfo.nomeUsuario = 'user';
-				salvarInformacoesUsuario('user', {qtd: 100, data: datetime});
+				salvarInformacoesUsuario('user', {qtd: 300, data: datetime});
 			}
 		}
 		else 
@@ -91,9 +91,9 @@ function carregarInformacoesDoUsuario() {
 			var datetime =  (currentdate.getMonth()+1) +"-"
 					+ currentdate.getDate()  + "-" 
 					+ currentdate.getFullYear();
-			userInfo.qtdLikesRestantes = 100;
+			userInfo.qtdLikesRestantes = 300;
 			userInfo.nomeUsuario = 'user';
-			salvarInformacoesUsuario('user', {qtd: 100, data: datetime});
+			salvarInformacoesUsuario('user', {qtd: 300, data: datetime});
 			
 		}
 		$('#numeroLikes').html(userInfo.qtdLikesRestantes);

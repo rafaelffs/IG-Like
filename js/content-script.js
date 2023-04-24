@@ -1,18 +1,25 @@
 setTimeout(function () {
     if (total != 0) {
-        $('#react-root > section > main > article > div.EZdmt > div > div > div:nth-child(1) > div:nth-child(1) > a > div').click()
+        //document.querySelectorAll('div > div > div:nth-child(1) > div:nth-child(1) > a > div')[0].click()
+		document.getElementsByClassName("_aabd _aa8k  _al3l")[0].firstChild.click();
         for (var i = 0; i < (total * 2); i++) {
             (function (ind) {
                 setTimeout(function () {
                     if (total != 0) {
-                        if ($('button > div > span > svg')[0].ariaLabel == "Curtir") {
-                            obterInformacoesUsuario('user', function (usuario) {
+						//alert('1');
+						//alert(document.querySelectorAll('article section svg')[0].ariaLabel);
+                        if (document.querySelectorAll('article section svg')[0].ariaLabel == "Curtir") {
+                          //  alert('2');	
+							obterInformacoesUsuario('user', function (usuario) {
+							//	alert('3');
                                 salvarInformacoesUsuario('user', ('user', { qtd: total--, data: usuario.data }));
-                                $('body > div._2dDPU.CkGkG > div.zZYga > div > article > div.eo2As > section.ltpMr.Slqrh > span.fr66n > button').click();
+								//alert($('body > div > div > div > article > div > div > div > div > div > section > span > button'));		
+                                document.querySelectorAll('article section svg')[0].parentNode.parentNode.click();
                             });
                         }
-                        else if (document.getElementsByClassName('coreSpriteRightPaginationArrow')[0]) {
-                            document.getElementsByClassName('coreSpriteRightPaginationArrow')[0].click();
+                        else if (document.querySelectorAll('svg[aria-label="Avançar"]')[0].parentElement) {
+							//alert('4');
+                            document.querySelectorAll('svg[aria-label="Avançar"]')[0].parentElement.click();
                         }
                         else {
                             if (window.confirm("The page is broken, press OK to reload the page")) {
@@ -20,7 +27,7 @@ setTimeout(function () {
                             }
                         }
                     }
-                    else {
+                     else {
                         if (window.confirm("Your likes are over. Wait to reload next day.")) {
                             obterInformacoesUsuario('user', function (usuario) {
                                 salvarInformacoesUsuario('user', ('user', { qtd: 0, data: usuario.data }));
